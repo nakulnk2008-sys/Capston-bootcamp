@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recipe Recommendation Bot</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">AI-powered recipe companion</p>
+          <h1>Find a delicious recipe from any ingredient.</h1>
+          <p class="hero-text">
+            Enter what you have at home and the bot will suggest recipes with
+            cooking time, nutrition hints, ingredients, photos, and YouTube video guides.
+          </p>
+          <form id="searchForm" class="search-box">
+            <input
+              id="ingredientInput"
+              type="text"
+              placeholder="Try: chicken, tomato, garlic"
+              autocomplete="off"
+            />
+            <button type="submit">Recommend Recipes</button>
+          </form>
+          <div id="statusMessage" class="status-message"></div>
+        </div>
+      </header>
+
+      <main>
+        <section id="resultsSection" class="results-section" aria-live="polite">
+          <div id="recipeGrid" class="recipe-grid"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
